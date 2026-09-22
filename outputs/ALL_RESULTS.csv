@@ -1,0 +1,20 @@
+condition,family,precision,params_b,wer_normalized,perfect_pct,p50_ms,p95_ms,p99_ms,speedup_x,rtf,mlx_peak_mb,rss_peak_mb,segmentation_method,official_composite,continuous_audited,run_id,also_in,notes
+mega-asr-bf16,Mega-ASR,bfloat16,,0.0215,71.0,1163.62,1862.43,2019.93,9.29,0.1076,4903.23,4445.19,None (Per-turn),0.826,0.444,pipecat1000-unified,,
+qwen3-asr-1.7b-8bit-mc,Qwen3-ASR,8-bit,1.7,0.0217,70.9,957.83,1294.44,1622.51,10.82,0.0924,3272.37,2794.52,None (Per-turn),0.867,0.549,qwen3-variants-1000,,
+qwen3-asr-1.7b-5bit-mc,Qwen3-ASR,5-bit,1.7,0.0217,70.8,839.77,1050.03,1155.25,12.69,0.0788,2657.08,2216.3,None (Per-turn),0.917,0.596,qwen3-variants-1000,,
+qwen3-asr-1.7b-6bit-mc,Qwen3-ASR,6-bit,1.7,0.0217,71.0,978.29,1413.82,1797.22,10.48,0.0954,2862.18,2396.61,None (Per-turn),0.858,0.572,qwen3-variants-1000,,
+qwen3-asr-1.7b-int8,Qwen3-ASR,int8,1.7,0.0218,71.0,1082.14,1501.44,1892.82,9.85,0.1015,2923.49,2609.44,None (Per-turn),0.841,0.564,pipecat1000-unified,,
+qwen3-asr-1.7b-bf16-appauto,Qwen3-ASR,bfloat16,1.7,0.0219,70.4,6085.3,7456.43,8171.56,1.86,0.5379,6632.23,4684.56,None (Per-turn),0.628,0.299,qwen3-variants-1000,,
+qwen3-asr-1.7b-bf16-mc,Qwen3-ASR,bfloat16,1.7,0.0221,70.5,1587.7,2156.71,2556.24,6.62,0.151,4810.55,3882.77,None (Per-turn),0.755,0.433,qwen3-variants-1000,,
+qwen3-asr-1.7b-4bit-mc,Qwen3-ASR,4-bit,1.7,0.0241,68.5,557.25,802.34,927.94,17.83,0.0561,2451.99,2011.34,None (Per-turn),0.976,0.631,qwen3-variants-1000,,
+tea-asr-1.1,TEA,bfloat16,,0.0242,68.5,1171.06,1564.58,2460.04,9.13,0.1095,4810.55,4379.98,None (Per-turn),0.819,0.442,pipecat1000-unified,,
+qwen3-asr-1.7b-4bit-alkd-a8t4,Qwen3-ASR (mixed),mixed (audio 8-bit / text 4-bit),1.7,0.0242,68.3,689.06,1150.76,1434.54,14.06,0.0711,1572.99,1734.44,None (Per-turn),0.951,0.662,qwen3-variants-1000,,
+mega-asr-6bit,Mega-ASR,6-bit,,0.0262,67.1,656.6,801.82,919.13,16.64,0.0601,2862.18,2413.69,None (Per-turn),0.974,0.595,pipecat1000-unified,,
+granite-speech-4.1-2b-nar,Granite,bfloat16,2.0,0.0283,64.6,409.34,1206.55,2739.38,18.98,0.0527,5332.8,4810.19,None (Per-turn),0.972,0.457,qwen3-variants-1000,,
+whisper-large,Whisper,float16,1.55,0.0318,62.2,1320.14,2207.26,4187.84,7.08,0.1413,3489.56,3513.5,None (Per-turn),0.757,0.491,pipecat1000-unified,,
+whisper-turbo,Whisper,float16,0.809,0.0322,61.8,531.31,661.9,763.81,17.99,0.0556,2088.28,1781.12,None (Per-turn),0.968,0.635,pipecat1000-unified,pipecat1000-small4,
+granite-speech-4.0-1b-int8,Granite,int8,1.0,0.0349,59.2,1505.17,2043.1,2349.54,7.09,0.141,5452.23,3258.88,None (Per-turn),0.754,0.367,qwen3-variants-1000,,
+whisper-distil,Whisper,float16,0.756,0.038,56.2,533.91,704.27,842.78,17.57,0.0569,1984.65,1976.48,None (Per-turn),0.962,0.624,pipecat1000-unified,pipecat1000-small4,
+parakeet-tdt-0.6b-v3,Parakeet,float32,0.6,0.0383,57.8,126.31,236.41,376.97,72.99,0.0137,2890.34,2787.19,None (Per-turn),0.962,0.882,qwen3-variants-1000,,8/1000 empty outputs on silence
+vibevoice-streaming-7b-4bit,VibeVoice,4-bit,7.0,0.147,0.0,5164.53,7031.61,7942.82,2.05,0.4869,5915.08,5918.72,None (Per-turn),0.508,0.044,pipecat1000-vv7b4bit,,Speaker prefix in output (stripped WER=0.0679)
+qwen3-asr-1.7b-4bit,Qwen3-ASR (defective conv.),4-bit,1.7,0.2207,56.7,466.45,636.05,763.38,23.09,0.0433,2451.99,1999.17,None (Per-turn),0.779,0.367,pipecat1000-unified,,DEFECTIVE: 186/1000 template failures

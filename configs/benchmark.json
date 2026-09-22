@@ -1,0 +1,335 @@
+{
+  "config_version": "1.0.0",
+  "environment": {
+    "hardware": "Apple Silicon M5 (24GB Unified Memory, 8 GPU cores)",
+    "os": "macOS (Darwin)",
+    "engine": "MLX 0.32.2 (Metal accelerated)",
+    "memory_ceiling_mb": 20480.0
+  },
+  "segmentation": {
+    "default_manifest": "manifests/segments_longform_vad60s.json",
+    "default_method": "silero_vad",
+    "hard_max_sec": 60.0,
+    "target_sec": 60.0,
+    "min_silence_ms": 250,
+    "threshold": 0.5,
+    "alternatives": {
+      "rms_60s": "manifests/segments_longform_rms60s.json"
+    }
+  },
+  "longform": {
+    "audio_path": "data/longform/audio_16k.wav",
+    "duration_sec": 3731.818,
+    "sample_rate": 16000,
+    "channels": 1,
+    "description": "Continuous long-form audio benchmark (~62.2 min / 3,731.8s, 16 kHz mono PCM WAV, single speaker)"
+  },
+  "scope": {
+    "round_2026_09_quantized": {
+      "description": "2026-09 quantized round: only 8-bit/4-bit ASR conditions with short-test evidence. Supersedes the old full-matrix scope. All other registered conditions and history are retained, marked excluded below, files not deleted.",
+      "allowed_condition_ids": [
+        "qwen3-asr-1.7b-int8",
+        "vibevoice-streaming-7b-4bit"
+      ],
+      "excluded": [
+        {
+          "id": "whisper-turbo",
+          "reason": "FP16: historical results retained as native-continuous reference; not rerun in this round"
+        },
+        {
+          "id": "whisper-large",
+          "reason": "FP16: historical results retained as native-continuous reference; not rerun in this round"
+        },
+        {
+          "id": "whisper-distil",
+          "reason": "FP16: historical results retained as native-continuous reference; not rerun in this round"
+        },
+        {
+          "id": "mega-asr-bf16",
+          "reason": "BF16, out of 8/4-bit round scope; native longform BLOCKED (router 1501 vs 850)"
+        },
+        {
+          "id": "mega-asr-6bit",
+          "reason": "6-bit, out of 8/4-bit round scope; full-length run FAILED on hallucination loop despite exit 0"
+        },
+        {
+          "id": "tea-asr-1.1",
+          "reason": "BF16, out of 8/4-bit round scope; historical results retained"
+        },
+        {
+          "id": "vibevoice-streaming-7b-bf16",
+          "reason": "BF16: short test showed severe paging; never load in this round"
+        },
+        {
+          "id": "mimo-v2.5-asr-8bit",
+          "reason": "DEFERRED_UNVERIFIED: blocked on missing mlx_lm runtime dependency, not on weights; files kept"
+        },
+        {
+          "id": "gafiatulin/vibevoice-1.5b-mlx",
+          "reason": "TTS (voice-cloning) model, no audio encoder; not ASR-testable. HF API verified 2026-09-21. Not downloaded."
+        },
+        {
+          "id": "native-hour-input-for-quantized",
+          "reason": "Hour-long native input cancelled for both quantized models: VibeVoice has a 59-min silent trim upstream (mlx_audio vibevoice_asr.py:551); replaced by unified <=60s auto-segmented coverage"
+        }
+      ],
+      "gate_entrypoint": "scripts/segment_gate.py",
+      "default_behavior": "runners default to allowed_condition_ids; anything else requires explicit --allow-out-of-scope"
+    },
+    "round_2026_09_hour": {
+      "description": "Hour-long comparison round: speed + peak memory on the continuous long-form audio benchmark (~62.2 min / 3,731.8s, 16 kHz mono PCM WAV, single speaker), then a quality judgment. Native protocol for models whose longform engine handles the full duration; auto_segmented (shared <=60s manifest) for the rest. Protocols are reported separately and never ranked in one table.",
+      "native_conditions": [
+        "whisper-turbo",
+        "whisper-distil",
+        "whisper-large",
+        "tea-asr-1.1"
+      ],
+      "segmented_conditions": [
+        "qwen3-asr-1.7b-int8",
+        "qwen3-asr-1.7b-4bit",
+        "vibevoice-streaming-7b-4bit"
+      ],
+      "reusable_segmented_run": "segfull-20260921-final",
+      "excluded": [
+        {
+          "id": "mega-asr-6bit",
+          "reason": "hour-level capability FAILED: repetition loop / early truncation despite exit 0"
+        },
+        {
+          "id": "mega-asr-bf16",
+          "reason": "hour-level capability BLOCKED: router 1501 vs 850 fails even at 60s"
+        },
+        {
+          "id": "vibevoice-streaming-7b-bf16",
+          "reason": "BF16 severe paging on 24GB; not loaded"
+        },
+        {
+          "id": "mimo-v2.5-asr-8bit",
+          "reason": "DEFERRED_UNVERIFIED: mlx_lm runtime dependency missing"
+        }
+      ]
+    },
+    "round_2026_09_qwen3_variants": {
+      "description": "Qwen3-ASR-1.7B precision/variant sweep on the same 1000-sample Pipecat list, plus the VAD-60s segmentation control. Prepared and weights verified; runs are queued, not started.",
+      "conditions": [
+        "qwen3-asr-1.7b-4bit-mc",
+        "qwen3-asr-1.7b-5bit-mc",
+        "qwen3-asr-1.7b-6bit-mc",
+        "qwen3-asr-1.7b-8bit-mc",
+        "qwen3-asr-1.7b-bf16-mc",
+        "qwen3-asr-1.7b-bf16-appauto",
+        "qwen3-asr-1.7b-4bit-alkd-a8t4",
+        "parakeet-tdt-0.6b-v3",
+        "granite-speech-4.1-2b-nar",
+        "granite-speech-4.0-1b-int8"
+      ],
+      "reference_conditions": [
+        "qwen3-asr-1.7b-int8"
+      ],
+      "pending_control": {
+        "id": "vad-60s-segmentation",
+        "note": "Qwen3-INT8 hour-long with manifests/segments_longform_vad60s.json vs the RMS-60s baseline (0.0200 full / 0.0163 same-range)."
+      },
+      "excluded": [
+        {
+          "id": "vibevoice-asr-4bit",
+          "reason": "BLOCKED_DEGENERATE_OUTPUT: loads but repeats under the locked mlx-audio non-streaming path"
+        }
+      ],
+      "run_map": {
+        "qwen3-asr-1.7b-int8": "pipecat1000-unified"
+      }
+    }
+  },
+  "conditions": [
+    {
+      "id": "whisper-turbo",
+      "name": "Whisper large-v3-turbo",
+      "precision": "float16",
+      "adapter": "whisper",
+      "longform_policy": "native",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "whisper-large",
+      "name": "Whisper large-v3",
+      "precision": "float16",
+      "adapter": "whisper",
+      "longform_policy": "native",
+      "max_input_sec": null,
+      "shortform_max_input_sec": null
+    },
+    {
+      "id": "whisper-distil",
+      "name": "Distil-Whisper large-v3",
+      "precision": "float16",
+      "adapter": "whisper",
+      "longform_policy": "native",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "mega-asr-bf16",
+      "name": "Mega-ASR-bf16",
+      "precision": "bfloat16",
+      "adapter": "mega",
+      "longform_policy": "unsupported",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "mega-asr-6bit",
+      "name": "Mega-ASR-6bit",
+      "precision": "6-bit",
+      "adapter": "mega",
+      "longform_policy": "unsupported",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "tea-asr-1.1",
+      "name": "TEA-ASR-1.1",
+      "precision": "bfloat16",
+      "adapter": "tea",
+      "longform_policy": "native",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "qwen3-asr-1.7b-int8",
+      "name": "Qwen3-ASR-1.7B INT8",
+      "precision": "int8",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": null
+    },
+    {
+      "id": "qwen3-asr-1.7b-4bit",
+      "name": "Qwen3-ASR-1.7B MLX 4-bit (aufklarer)",
+      "precision": "4-bit",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 60,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "vibevoice-asr-4bit",
+      "name": "VibeVoice ASR 7B 4-bit (base, non-streaming)",
+      "precision": "4-bit",
+      "adapter": "vibevoice",
+      "longform_policy": "unsupported",
+      "max_input_sec": 60,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "vibevoice-streaming-7b-4bit",
+      "name": "VibeVoice ASR Streaming 7B 4-bit",
+      "precision": "4-bit",
+      "adapter": "vibevoice",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 60,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "vibevoice-streaming-7b-bf16",
+      "name": "VibeVoice ASR Streaming 7B BF16",
+      "precision": "bfloat16",
+      "adapter": "vibevoice",
+      "longform_policy": "unsupported",
+      "max_input_sec": null,
+      "shortform_max_input_sec": null
+    },
+    {
+      "id": "qwen3-asr-1.7b-4bit-mc",
+      "name": "Qwen3-ASR-1.7B 4-bit (mlx-community)",
+      "precision": "4-bit",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "qwen3-asr-1.7b-5bit-mc",
+      "name": "Qwen3-ASR-1.7B 5-bit (mlx-community)",
+      "precision": "5-bit",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "qwen3-asr-1.7b-6bit-mc",
+      "name": "Qwen3-ASR-1.7B 6-bit (mlx-community)",
+      "precision": "6-bit",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "qwen3-asr-1.7b-8bit-mc",
+      "name": "Qwen3-ASR-1.7B 8-bit (mlx-community)",
+      "precision": "8-bit",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "qwen3-asr-1.7b-bf16-mc",
+      "name": "Qwen3-ASR-1.7B BF16 (mlx-community)",
+      "precision": "bfloat16",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "qwen3-asr-1.7b-bf16-appauto",
+      "name": "Qwen3-ASR-1.7B BF16 (appautomaton)",
+      "precision": "bfloat16",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "qwen3-asr-1.7b-4bit-alkd-a8t4",
+      "name": "Qwen3-ASR-1.7B audio8/text4 mixed (Alkd)",
+      "precision": "mixed (audio 8-bit / text 4-bit)",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "parakeet-tdt-0.6b-v3",
+      "name": "Parakeet TDT 0.6B v3 (NVIDIA, MLX)",
+      "precision": "float32",
+      "adapter": "native",
+      "longform_policy": "unsupported",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "granite-speech-4.1-2b-nar",
+      "name": "Granite Speech 4.1 2B NAR (IBM, MLX)",
+      "precision": "bfloat16",
+      "adapter": "native",
+      "longform_policy": "unsupported",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "granite-speech-4.0-1b-int8",
+      "name": "Granite 4.0 1B Speech INT8 (appautomaton, MLX)",
+      "precision": "int8",
+      "adapter": "native",
+      "longform_policy": "unsupported",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    }
+  ]
+}

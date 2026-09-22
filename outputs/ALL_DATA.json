@@ -1,0 +1,1405 @@
+{
+  "generated": "2026-09-22T01:16:33",
+  "pipecat1000": [
+    {
+      "cond": "mega-asr-bf16",
+      "run": "pipecat1000-unified",
+      "also_in": [],
+      "family": "Mega-ASR",
+      "precision": "bfloat16",
+      "params_b": null,
+      "wer": 0.0215,
+      "mech_wer": 0.0235,
+      "perfect": 71.0,
+      "p50": 1163.62,
+      "p95": 1862.43,
+      "p99": 2019.93,
+      "speedup": 9.29,
+      "rtf": 0.1076,
+      "mlx_mb": 4903.23,
+      "rss_mb": 4445.19,
+      "peak_mb": 4903.23
+    },
+    {
+      "cond": "qwen3-asr-1.7b-8bit-mc",
+      "run": "qwen3-variants-1000",
+      "also_in": [],
+      "family": "Qwen3-ASR",
+      "precision": "8-bit",
+      "params_b": 1.7,
+      "wer": 0.0217,
+      "mech_wer": 0.0237,
+      "perfect": 70.9,
+      "p50": 957.83,
+      "p95": 1294.44,
+      "p99": 1622.51,
+      "speedup": 10.82,
+      "rtf": 0.0924,
+      "mlx_mb": 3272.37,
+      "rss_mb": 2794.52,
+      "peak_mb": 3272.37
+    },
+    {
+      "cond": "qwen3-asr-1.7b-5bit-mc",
+      "run": "qwen3-variants-1000",
+      "also_in": [],
+      "family": "Qwen3-ASR",
+      "precision": "5-bit",
+      "params_b": 1.7,
+      "wer": 0.0217,
+      "mech_wer": 0.0236,
+      "perfect": 70.8,
+      "p50": 839.77,
+      "p95": 1050.03,
+      "p99": 1155.25,
+      "speedup": 12.69,
+      "rtf": 0.0788,
+      "mlx_mb": 2657.08,
+      "rss_mb": 2216.3,
+      "peak_mb": 2657.08
+    },
+    {
+      "cond": "qwen3-asr-1.7b-6bit-mc",
+      "run": "qwen3-variants-1000",
+      "also_in": [],
+      "family": "Qwen3-ASR",
+      "precision": "6-bit",
+      "params_b": 1.7,
+      "wer": 0.0217,
+      "mech_wer": 0.0236,
+      "perfect": 71.0,
+      "p50": 978.29,
+      "p95": 1413.82,
+      "p99": 1797.22,
+      "speedup": 10.48,
+      "rtf": 0.0954,
+      "mlx_mb": 2862.18,
+      "rss_mb": 2396.61,
+      "peak_mb": 2862.18
+    },
+    {
+      "cond": "qwen3-asr-1.7b-int8",
+      "run": "pipecat1000-unified",
+      "also_in": [],
+      "family": "Qwen3-ASR",
+      "precision": "int8",
+      "params_b": 1.7,
+      "wer": 0.0218,
+      "mech_wer": 0.0237,
+      "perfect": 71.0,
+      "p50": 1082.14,
+      "p95": 1501.44,
+      "p99": 1892.82,
+      "speedup": 9.85,
+      "rtf": 0.1015,
+      "mlx_mb": 2923.49,
+      "rss_mb": 2609.44,
+      "peak_mb": 2923.49
+    },
+    {
+      "cond": "qwen3-asr-1.7b-bf16-appauto",
+      "run": "qwen3-variants-1000",
+      "also_in": [],
+      "family": "Qwen3-ASR",
+      "precision": "bfloat16",
+      "params_b": 1.7,
+      "wer": 0.0219,
+      "mech_wer": 0.0239,
+      "perfect": 70.4,
+      "p50": 6085.3,
+      "p95": 7456.43,
+      "p99": 8171.56,
+      "speedup": 1.86,
+      "rtf": 0.5379,
+      "mlx_mb": 6632.23,
+      "rss_mb": 4684.56,
+      "peak_mb": 6632.23
+    },
+    {
+      "cond": "qwen3-asr-1.7b-bf16-mc",
+      "run": "qwen3-variants-1000",
+      "also_in": [],
+      "family": "Qwen3-ASR",
+      "precision": "bfloat16",
+      "params_b": 1.7,
+      "wer": 0.0221,
+      "mech_wer": 0.0241,
+      "perfect": 70.5,
+      "p50": 1587.7,
+      "p95": 2156.71,
+      "p99": 2556.24,
+      "speedup": 6.62,
+      "rtf": 0.151,
+      "mlx_mb": 4810.55,
+      "rss_mb": 3882.77,
+      "peak_mb": 4810.55
+    },
+    {
+      "cond": "qwen3-asr-1.7b-4bit-mc",
+      "run": "qwen3-variants-1000",
+      "also_in": [],
+      "family": "Qwen3-ASR",
+      "precision": "4-bit",
+      "params_b": 1.7,
+      "wer": 0.0241,
+      "mech_wer": 0.0258,
+      "perfect": 68.5,
+      "p50": 557.25,
+      "p95": 802.34,
+      "p99": 927.94,
+      "speedup": 17.83,
+      "rtf": 0.0561,
+      "mlx_mb": 2451.99,
+      "rss_mb": 2011.34,
+      "peak_mb": 2451.99
+    },
+    {
+      "cond": "tea-asr-1.1",
+      "run": "pipecat1000-unified",
+      "also_in": [],
+      "family": "TEA",
+      "precision": "bfloat16",
+      "params_b": null,
+      "wer": 0.0242,
+      "mech_wer": 0.026,
+      "perfect": 68.5,
+      "p50": 1171.06,
+      "p95": 1564.58,
+      "p99": 2460.04,
+      "speedup": 9.13,
+      "rtf": 0.1095,
+      "mlx_mb": 4810.55,
+      "rss_mb": 4379.98,
+      "peak_mb": 4810.55
+    },
+    {
+      "cond": "qwen3-asr-1.7b-4bit-alkd-a8t4",
+      "run": "qwen3-variants-1000",
+      "also_in": [],
+      "family": "Qwen3-ASR (mixed)",
+      "precision": "mixed (audio 8-bit / text 4-bit)",
+      "params_b": 1.7,
+      "wer": 0.0242,
+      "mech_wer": 0.0259,
+      "perfect": 68.3,
+      "p50": 689.06,
+      "p95": 1150.76,
+      "p99": 1434.54,
+      "speedup": 14.06,
+      "rtf": 0.0711,
+      "mlx_mb": 1572.99,
+      "rss_mb": 1734.44,
+      "peak_mb": 1734.44
+    },
+    {
+      "cond": "mega-asr-6bit",
+      "run": "pipecat1000-unified",
+      "also_in": [],
+      "family": "Mega-ASR",
+      "precision": "6-bit",
+      "params_b": null,
+      "wer": 0.0262,
+      "mech_wer": 0.0282,
+      "perfect": 67.1,
+      "p50": 656.6,
+      "p95": 801.82,
+      "p99": 919.13,
+      "speedup": 16.64,
+      "rtf": 0.0601,
+      "mlx_mb": 2862.18,
+      "rss_mb": 2413.69,
+      "peak_mb": 2862.18
+    },
+    {
+      "cond": "granite-speech-4.1-2b-nar",
+      "run": "qwen3-variants-1000",
+      "also_in": [],
+      "family": "Granite",
+      "precision": "bfloat16",
+      "params_b": 2.0,
+      "wer": 0.0283,
+      "mech_wer": 0.0303,
+      "perfect": 64.6,
+      "p50": 409.34,
+      "p95": 1206.55,
+      "p99": 2739.38,
+      "speedup": 18.98,
+      "rtf": 0.0527,
+      "mlx_mb": 5332.8,
+      "rss_mb": 4810.19,
+      "peak_mb": 5332.8
+    },
+    {
+      "cond": "whisper-large",
+      "run": "pipecat1000-unified",
+      "also_in": [],
+      "family": "Whisper",
+      "precision": "float16",
+      "params_b": 1.55,
+      "wer": 0.0318,
+      "mech_wer": 0.034,
+      "perfect": 62.2,
+      "p50": 1320.14,
+      "p95": 2207.26,
+      "p99": 4187.84,
+      "speedup": 7.08,
+      "rtf": 0.1413,
+      "mlx_mb": 3489.56,
+      "rss_mb": 3513.5,
+      "peak_mb": 3513.5
+    },
+    {
+      "cond": "whisper-turbo",
+      "run": "pipecat1000-unified",
+      "also_in": [
+        "pipecat1000-small4"
+      ],
+      "family": "Whisper",
+      "precision": "float16",
+      "params_b": 0.809,
+      "wer": 0.0322,
+      "mech_wer": 0.0344,
+      "perfect": 61.8,
+      "p50": 531.31,
+      "p95": 661.9,
+      "p99": 763.81,
+      "speedup": 17.99,
+      "rtf": 0.0556,
+      "mlx_mb": 2088.28,
+      "rss_mb": 1781.12,
+      "peak_mb": 2088.28
+    },
+    {
+      "cond": "granite-speech-4.0-1b-int8",
+      "run": "qwen3-variants-1000",
+      "also_in": [],
+      "family": "Granite",
+      "precision": "int8",
+      "params_b": 1.0,
+      "wer": 0.0349,
+      "mech_wer": 0.0367,
+      "perfect": 59.2,
+      "p50": 1505.17,
+      "p95": 2043.1,
+      "p99": 2349.54,
+      "speedup": 7.09,
+      "rtf": 0.141,
+      "mlx_mb": 5452.23,
+      "rss_mb": 3258.88,
+      "peak_mb": 5452.23
+    },
+    {
+      "cond": "whisper-distil",
+      "run": "pipecat1000-unified",
+      "also_in": [
+        "pipecat1000-small4"
+      ],
+      "family": "Whisper",
+      "precision": "float16",
+      "params_b": 0.756,
+      "wer": 0.038,
+      "mech_wer": 0.04,
+      "perfect": 56.2,
+      "p50": 533.91,
+      "p95": 704.27,
+      "p99": 842.78,
+      "speedup": 17.57,
+      "rtf": 0.0569,
+      "mlx_mb": 1984.65,
+      "rss_mb": 1976.48,
+      "peak_mb": 1984.65
+    },
+    {
+      "cond": "parakeet-tdt-0.6b-v3",
+      "run": "qwen3-variants-1000",
+      "also_in": [],
+      "family": "Parakeet",
+      "precision": "float32",
+      "params_b": 0.6,
+      "wer": 0.0383,
+      "mech_wer": 0.0402,
+      "perfect": 57.8,
+      "p50": 126.31,
+      "p95": 236.41,
+      "p99": 376.97,
+      "speedup": 72.99,
+      "rtf": 0.0137,
+      "mlx_mb": 2890.34,
+      "rss_mb": 2787.19,
+      "peak_mb": 2890.34
+    },
+    {
+      "cond": "vibevoice-streaming-7b-4bit",
+      "run": "pipecat1000-vv7b4bit",
+      "also_in": [],
+      "family": "VibeVoice",
+      "precision": "4-bit",
+      "params_b": 7.0,
+      "wer": 0.147,
+      "mech_wer": 0.1485,
+      "perfect": 0.0,
+      "p50": 5164.53,
+      "p95": 7031.61,
+      "p99": 7942.82,
+      "speedup": 2.05,
+      "rtf": 0.4869,
+      "mlx_mb": 5915.08,
+      "rss_mb": 5918.72,
+      "peak_mb": 5918.72
+    },
+    {
+      "cond": "qwen3-asr-1.7b-4bit",
+      "run": "pipecat1000-unified",
+      "also_in": [],
+      "family": "Qwen3-ASR (defective conv.)",
+      "precision": "4-bit",
+      "params_b": 1.7,
+      "wer": 0.2207,
+      "mech_wer": 0.2226,
+      "perfect": 56.7,
+      "p50": 466.45,
+      "p95": 636.05,
+      "p99": 763.38,
+      "speedup": 23.09,
+      "rtf": 0.0433,
+      "mlx_mb": 2451.99,
+      "rss_mb": 1999.17,
+      "peak_mb": 2451.99
+    }
+  ],
+  "hour_longform": [
+    {
+      "group": "native_continuous",
+      "cond": "whisper-turbo",
+      "run": "hour-20260921-final",
+      "segments": 675,
+      "infer_s": 99.09,
+      "rtf": 0.0266,
+      "speedup": 37.59,
+      "mlx_mb": 4033.64,
+      "rss_mb": 2135.8,
+      "peak_mb": 4033.64,
+      "words": 9718,
+      "quality": "PASS"
+    },
+    {
+      "group": "native_continuous",
+      "cond": "whisper-distil",
+      "run": "hour-20260921-final",
+      "segments": 743,
+      "infer_s": 84.43,
+      "rtf": 0.0226,
+      "speedup": 44.25,
+      "mlx_mb": 3933.55,
+      "rss_mb": 2072.98,
+      "peak_mb": 3933.55,
+      "words": 9707,
+      "quality": "PASS"
+    },
+    {
+      "group": "native_continuous",
+      "cond": "whisper-large",
+      "run": "hour-20260921-final",
+      "segments": 632,
+      "infer_s": 537.27,
+      "rtf": 0.144,
+      "speedup": 6.94,
+      "mlx_mb": 5434.8,
+      "rss_mb": 2730.8,
+      "peak_mb": 5434.8,
+      "words": 9731,
+      "quality": "PASS"
+    },
+    {
+      "group": "native_continuous",
+      "cond": "tea-asr-1.1",
+      "run": "hour-20260921-final",
+      "segments": 3,
+      "infer_s": 720.23,
+      "rtf": 0.193,
+      "speedup": 5.18,
+      "mlx_mb": 15029.82,
+      "rss_mb": 3414.55,
+      "peak_mb": 15029.82,
+      "words": 7837,
+      "quality": "PASS"
+    },
+    {
+      "group": "auto_segmented",
+      "cond": "qwen3-asr-1.7b-int8",
+      "run": "segfull-20260921-final",
+      "segments": 68,
+      "infer_s": 537.19,
+      "rtf": 0.1439,
+      "speedup": 6.95,
+      "mlx_mb": 4766.67,
+      "rss_mb": 2569.72,
+      "peak_mb": 4766.67,
+      "words": 9824,
+      "quality": "PASS"
+    },
+    {
+      "group": "auto_segmented",
+      "cond": "qwen3-asr-1.7b-4bit",
+      "run": "hour-20260921-final",
+      "segments": 68,
+      "infer_s": 182.26,
+      "rtf": 0.0488,
+      "speedup": 20.49,
+      "mlx_mb": 2897.84,
+      "rss_mb": 2025.61,
+      "peak_mb": 2897.84,
+      "words": 6574,
+      "quality": "PASS"
+    },
+    {
+      "group": "auto_segmented",
+      "cond": "vibevoice-streaming-7b-4bit",
+      "run": "segfull-20260921-final",
+      "segments": 68,
+      "infer_s": 1754.36,
+      "rtf": 0.4701,
+      "speedup": 2.13,
+      "mlx_mb": 5989.93,
+      "rss_mb": 5960.12,
+      "peak_mb": 5989.93,
+      "words": 10347,
+      "quality": "PASS"
+    },
+    {
+      "group": "auto_segmented",
+      "cond": "qwen3-asr-1.7b-int8",
+      "run": "segvad60",
+      "segments": 82,
+      "infer_s": 532.92,
+      "rtf": 0.1428,
+      "speedup": 7.0,
+      "mlx_mb": 4082.0,
+      "rss_mb": 2568.12,
+      "peak_mb": 4082.0,
+      "words": 9882,
+      "quality": "PASS"
+    }
+  ],
+  "vibevoice_prefix_stripped": {
+    "wer": 0.0679,
+    "stripped": 954,
+    "total": 1000
+  },
+  "short_sweep": {
+    "sweep_id": "sweep-20260921-final",
+    "method": "sst-benchmark sweep.py: r repeats averaged",
+    "cells": [
+      {
+        "condition": "qwen3-asr-1.7b-int8",
+        "audio": "test_15s",
+        "audio_duration_sec": 15.04,
+        "status": "SUCCESS",
+        "completed_reps": 3,
+        "planned_reps": 3,
+        "load_time_sec_avg": 0.3733,
+        "inference_time_sec_avg": 12.2133,
+        "rtf_avg": 0.8121,
+        "speedup_avg": 1.23,
+        "peak_rss_mb_max": 2540.2,
+        "mlx_peak_mb_max": 2863.8,
+        "char_count_avg": 778.0,
+        "word_count_avg": 258.0,
+        "generation_tokens_max": 512,
+        "token_limit_reached_any": true,
+        "quality": "FAILED_HALLUCINATION_LOOP",
+        "max_mem_cap_mb": 20480.0,
+        "within_cap": true
+      },
+      {
+        "condition": "qwen3-asr-1.7b-int8",
+        "audio": "test_300s",
+        "audio_duration_sec": 299.97,
+        "status": "SUCCESS",
+        "completed_reps": 1,
+        "planned_reps": 1,
+        "load_time_sec_avg": 0.69,
+        "inference_time_sec_avg": 144.07,
+        "rtf_avg": 0.4803,
+        "speedup_avg": 2.08,
+        "peak_rss_mb_max": 2758.4,
+        "mlx_peak_mb_max": 8674.2,
+        "char_count_avg": 4338.0,
+        "word_count_avg": 794.0,
+        "generation_tokens_max": 953,
+        "token_limit_reached_any": false,
+        "quality": "PASS",
+        "max_mem_cap_mb": 20480.0,
+        "within_cap": true
+      },
+      {
+        "condition": "qwen3-asr-1.7b-int8",
+        "audio": "test_60s",
+        "audio_duration_sec": 60.03,
+        "status": "SUCCESS",
+        "completed_reps": 3,
+        "planned_reps": 3,
+        "load_time_sec_avg": 0.5467,
+        "inference_time_sec_avg": 8.96,
+        "rtf_avg": 0.1492,
+        "speedup_avg": 6.7,
+        "peak_rss_mb_max": 2567.6,
+        "mlx_peak_mb_max": 4767.9,
+        "char_count_avg": 588.0,
+        "word_count_avg": 112.0,
+        "generation_tokens_max": 134,
+        "token_limit_reached_any": false,
+        "quality": "PASS",
+        "max_mem_cap_mb": 20480.0,
+        "within_cap": true
+      },
+      {
+        "condition": "vibevoice-streaming-7b-4bit",
+        "audio": "test_15s",
+        "audio_duration_sec": 15.04,
+        "status": "SUCCESS",
+        "completed_reps": 3,
+        "planned_reps": 3,
+        "load_time_sec_avg": 3.8167,
+        "inference_time_sec_avg": 7.87,
+        "rtf_avg": 0.5233,
+        "speedup_avg": 1.91,
+        "peak_rss_mb_max": 5942.4,
+        "mlx_peak_mb_max": 5897.0,
+        "char_count_avg": 157.0,
+        "word_count_avg": 33.0,
+        "generation_tokens_max": 61,
+        "token_limit_reached_any": false,
+        "quality": "PASS",
+        "max_mem_cap_mb": 20480.0,
+        "within_cap": true
+      },
+      {
+        "condition": "vibevoice-streaming-7b-4bit",
+        "audio": "test_60s",
+        "audio_duration_sec": 60.03,
+        "status": "SUCCESS",
+        "completed_reps": 3,
+        "planned_reps": 3,
+        "load_time_sec_avg": 3.3267,
+        "inference_time_sec_avg": 31.6867,
+        "rtf_avg": 0.5279,
+        "speedup_avg": 1.89,
+        "peak_rss_mb_max": 5960.6,
+        "mlx_peak_mb_max": 5986.7,
+        "char_count_avg": 812.0,
+        "word_count_avg": 148.0,
+        "generation_tokens_max": 231,
+        "token_limit_reached_any": false,
+        "quality": "PASS",
+        "max_mem_cap_mb": 20480.0,
+        "within_cap": true
+      }
+    ]
+  },
+  "viability_checks": [
+    {
+      "note": "60s speech clip; LOOSE_REF = machine-generated auto-caption (not human verified)",
+      "reference": "machine-auto-caption.en.vtt",
+      "rows": [
+        {
+          "condition": "parakeet-tdt-0.6b-v3",
+          "name": "Parakeet TDT 0.6B v3 (NVIDIA, MLX)",
+          "precision": "float32",
+          "runtime": "(default)",
+          "path": "models/parakeet-tdt-0.6b-v3",
+          "load_sec": 2.37,
+          "infer_sec": 2.37,
+          "rtf": 0.0395,
+          "rss_mb": 2776.0,
+          "mlx_mb": 3524.1,
+          "words": 112,
+          "chars": 588,
+          "token_limit_reached": false,
+          "quality": "PASS",
+          "quality_reason": null,
+          "wer_loose": 0.0645,
+          "text_head": "Hi everybody, welcome to our PIQ for STEM major session. As we're giving it just a couple of moments for folks to get logged in, we'd love to hear in the chat w",
+          "status": "USABLE"
+        },
+        {
+          "condition": "granite-speech-4.1-2b-nar",
+          "name": "Granite Speech 4.1 2B NAR (IBM, MLX)",
+          "precision": "bfloat16",
+          "runtime": "(default)",
+          "path": "models/granite-speech-4.1-2b-nar",
+          "load_sec": 1.06,
+          "infer_sec": 2.85,
+          "rtf": 0.0475,
+          "rss_mb": 3985.1,
+          "mlx_mb": 5790.4,
+          "words": 114,
+          "chars": 593,
+          "token_limit_reached": false,
+          "quality": "PASS",
+          "quality_reason": null,
+          "wer_loose": 0.0565,
+          "text_head": "hi everybody, welcome to our piq for stem major session. as we're giving it just a couple of moments for our folks to get logged in. we'd love to hear in the ch",
+          "status": "USABLE"
+        },
+        {
+          "condition": "granite-speech-4.0-1b-int8",
+          "name": "Granite 4.0 1B Speech INT8 (appautomaton, MLX)",
+          "precision": "int8",
+          "runtime": "(default)",
+          "path": "models/granite-4.0-1b-speech-int8",
+          "load_sec": 0.56,
+          "infer_sec": 6.77,
+          "rtf": 0.1127,
+          "rss_mb": 3985.1,
+          "mlx_mb": 8755.2,
+          "words": 114,
+          "chars": 586,
+          "token_limit_reached": false,
+          "quality": "PASS",
+          "quality_reason": null,
+          "wer_loose": 0.0484,
+          "text_head": "hi everybody welcome to our piqu for stem major session as we're giving it just a couple of moments for folks to get logged in we'd love to hear in the chat wha",
+          "status": "USABLE"
+        }
+      ]
+    }
+  ],
+  "vad60_vs_rms60": {
+    "rows": [
+      {
+        "label": "VAD-60s",
+        "segments": 82,
+        "covered_sec": 3731.8,
+        "words": 9882,
+        "infer_sec": 532.9,
+        "rtf": 0.1428,
+        "speedup": 7.0,
+        "mlx_mb": 4082.0,
+        "rss_mb": 2568.1,
+        "wer_norm": 0.0212,
+        "wer_mech": 0.0322
+      },
+      {
+        "label": "RMS-60s",
+        "segments": 68,
+        "covered_sec": 3731.8,
+        "words": 9824,
+        "infer_sec": 537.2,
+        "rtf": 0.1439,
+        "speedup": 6.95,
+        "mlx_mb": 4766.7,
+        "rss_mb": 2569.7,
+        "wer_norm": 0.02,
+        "wer_mech": 0.0359
+      }
+    ]
+  },
+  "partial_seg_compare": {
+    "note": "Partial comparison. Each variant is measured on its own exact covered range; the reference VTT is cut to the same range. WER is LOOSE_REF (machine generated, not human verified).",
+    "reference": "data/longform/reference/reference.vtt",
+    "rows": [
+      {
+        "label": "VAD-300s (partial)",
+        "run_id": "segvad300fix",
+        "condition": "qwen3-asr-1.7b-int8",
+        "segments": 11,
+        "covered_sec": 3125.8,
+        "coverage_pct": 83.8,
+        "words": 8239,
+        "wpm": 158.1,
+        "ref_words": 8343,
+        "infer_sec": 1522.7,
+        "rtf": 0.4871,
+        "speedup": 2.05,
+        "rss_mb": 2759.7,
+        "mlx_mb": 8035.3,
+        "peak_mb": 8035.3,
+        "wer_norm_loose": 0.0186,
+        "wer_mech_loose": 0.0282
+      },
+      {
+        "label": "RMS-60s (same range)",
+        "run_id": "segfull-20260921-final",
+        "condition": "qwen3-asr-1.7b-int8",
+        "segments": 56,
+        "covered_sec": 3090.9,
+        "coverage_pct": 82.8,
+        "words": 8074,
+        "wpm": 156.7,
+        "ref_words": 8236,
+        "infer_sec": 443.1,
+        "rtf": 0.1434,
+        "speedup": 6.98,
+        "rss_mb": 2569.7,
+        "mlx_mb": 4766.7,
+        "peak_mb": 4766.7,
+        "wer_norm_loose": 0.0163,
+        "wer_mech_loose": 0.0324
+      }
+    ]
+  },
+  "segment_manifests": {
+    "segments_longform_vad300s.json": {
+      "method": "silero_vad",
+      "segment_count": 14,
+      "max_sec": 299.696,
+      "mean_sec": 266.6,
+      "hard_cuts": 0
+    },
+    "segments_longform_vad60s.json": {
+      "method": "silero_vad",
+      "segment_count": 82,
+      "max_sec": 60.0,
+      "mean_sec": 45.5,
+      "hard_cuts": 1
+    },
+    "segments_longform_60s.json": {
+      "method": "rms_energy",
+      "segment_count": 68,
+      "max_sec": 60.0,
+      "mean_sec": 54.9,
+      "hard_cuts": 0
+    }
+  },
+  "compat_probes": {
+    "compat_qwen3_4bit": {
+      "status": "PASS",
+      "loader": "mlx_audio.stt.utils.load_model",
+      "reason": null
+    },
+    "compat_qwen3_asr_1_7b_mc_6bit": {
+      "status": "PASS",
+      "loader": "mlx_audio.stt.utils.load_model(model_type=qwen3_asr)",
+      "reason": null
+    },
+    "compat_speech_qwen3_asr_1_7b_mc_6bit": {
+      "status": "PASS",
+      "loader": "mlx_audio.stt.utils.load_model(model_type=qwen3_asr)",
+      "reason": null
+    },
+    "compat_speech_qwen3_asr_1_7b_mc_4bit": {
+      "status": "PASS",
+      "loader": "mlx_audio.stt.utils.load_model(model_type=qwen3_asr)",
+      "reason": null
+    },
+    "compat_qwen3_asr_1_7b_mc_4bit": {
+      "status": "PASS",
+      "loader": "mlx_audio.stt.utils.load_model(model_type=qwen3_asr)",
+      "reason": null
+    },
+    "compat_qwen3_asr_1_7b_mc_5bit": {
+      "status": "DEGENERATE_OUTPUT",
+      "loader": "mlx_audio.stt.utils.load_model(model_type=qwen3_asr)",
+      "reason": "loaded and ran, but text quality is FAILED_HALLUCINATION_LOOP: repetition loop"
+    },
+    "compat_speech_qwen3_asr_1_7b_mc_5bit": {
+      "status": "PASS",
+      "loader": "mlx_audio.stt.utils.load_model(model_type=qwen3_asr)",
+      "reason": null
+    },
+    "compat_vibevoice_asr_4bit": {
+      "status": "DEGENERATE_OUTPUT",
+      "loader": "mlx_audio.stt.utils.load_model(model_type=vibevoice_asr)",
+      "reason": "loaded and ran, but text quality is FAILED_HALLUCINATION_LOOP: degenerate vocabulary"
+    },
+    "compat_speech_qwen3_asr_1_7b_mc_8bit": {
+      "status": "PASS",
+      "loader": "mlx_audio.stt.utils.load_model(model_type=qwen3_asr)",
+      "reason": null
+    },
+    "compat_qwen3_asr_1_7b_mc_8bit": {
+      "status": "DEGENERATE_OUTPUT",
+      "loader": "mlx_audio.stt.utils.load_model(model_type=qwen3_asr)",
+      "reason": "loaded and ran, but text quality is FAILED_HALLUCINATION_LOOP: repetition loop"
+    },
+    "compat_qwen3_asr_1_7b_alkd_a8t4": {
+      "status": "BLOCKED_INCOMPATIBLE",
+      "loader": null,
+      "reason": "no known loader could load this checkpoint"
+    },
+    "compat_qwen3_asr_1_7b_appauto_bf16": {
+      "status": "PASS",
+      "loader": "mlx_speech.asr.load",
+      "reason": null
+    },
+    "compat_qwen3_asr_1_7b_mc_bf16": {
+      "status": "DEGENERATE_OUTPUT",
+      "loader": "mlx_audio.stt.utils.load_model(model_type=qwen3_asr)",
+      "reason": "loaded and ran, but text quality is FAILED_HALLUCINATION_LOOP: repetition loop"
+    },
+    "compat_speech_qwen3_asr_1_7b_mc_bf16": {
+      "status": "PASS",
+      "loader": "mlx_audio.stt.utils.load_model(model_type=qwen3_asr)",
+      "reason": null
+    },
+    "compat_speech_qwen3_asr_1_7b_appauto_bf16": {
+      "status": "PASS",
+      "loader": "mlx_speech.asr.load",
+      "reason": null
+    }
+  },
+  "registry": {
+    "whisper_turbo": {
+      "name": "Whisper large-v3-turbo",
+      "repo_id": null,
+      "revision": null,
+      "precision": "float16",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "whisper",
+      "status": null,
+      "local_path": "~/.cache/huggingface/hub/models--mlx-community--whisper-large-v3-turbo/snapshots/a4aaeec0636e6fef84abdcbe3544cb2bf7e9f6fb"
+    },
+    "whisper_large": {
+      "name": "Whisper large-v3",
+      "repo_id": null,
+      "revision": null,
+      "precision": "float16",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "whisper",
+      "status": null,
+      "local_path": "~/.cache/huggingface/hub/models--mlx-community--whisper-large-v3-mlx/snapshots/49e6aa286ad60c14352c404340ded53710378a11"
+    },
+    "whisper_distil": {
+      "name": "Distil-Whisper large-v3",
+      "repo_id": null,
+      "revision": null,
+      "precision": "float16",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "whisper",
+      "status": null,
+      "local_path": "~/.cache/huggingface/hub/models--mlx-community--distil-whisper-large-v3/snapshots/e1c3c155644be59f8b477c0186719442f7e3fbb0"
+    },
+    "mega_asr_bf16": {
+      "name": "Mega-ASR-bf16",
+      "repo_id": "mlx-community/Mega-ASR-bf16",
+      "revision": "58b2aa4ed62343871f6dba78a4f71db015406152",
+      "precision": "bfloat16",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "mega",
+      "status": null,
+      "local_path": "models/mega-asr-bf16"
+    },
+    "mega_asr_6bit": {
+      "name": "Mega-ASR-6bit",
+      "repo_id": "mlx-community/Mega-ASR-6bit",
+      "revision": "7a2f147b312bef1ba0027728714c80c9605f3f04",
+      "precision": "6-bit",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "mega",
+      "status": null,
+      "local_path": "models/mega-asr-6bit"
+    },
+    "tea_asr_1_1": {
+      "name": "TEA-ASR-1.1",
+      "repo_id": "JacobLinCool/TEA-ASR-1.1",
+      "revision": "bda08df76d4fd6b487b4a1dd7f0bddf8541696f8",
+      "precision": "bfloat16",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "tea",
+      "status": null,
+      "local_path": "models/tea-asr-1.1/mlx-bf16"
+    },
+    "qwen3_asr_1_7b_int8": {
+      "name": "Qwen3-ASR-1.7B INT8",
+      "repo_id": "appautomaton/qwen3-asr-1.7b-int8-mlx",
+      "revision": "31a02d835ce3b206e6d1e49bdbf33f16352a3f44",
+      "precision": "int8",
+      "runtime": "mlx_speech",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": null,
+      "local_path": "~/.cache/huggingface/hub/models--appautomaton--qwen3-asr-1.7b-int8-mlx/snapshots/31a02d835ce3b206e6d1e49bdbf33f16352a3f44"
+    },
+    "qwen3_asr_1_7b_mlx_4bit": {
+      "name": "Qwen3-ASR-1.7B MLX 4-bit (aufklarer)",
+      "repo_id": "aufklarer/Qwen3-ASR-1.7B-MLX-4bit",
+      "revision": "d4f9fa3bb45489219f0fcbec671c92d9c1a68fb6",
+      "precision": "4-bit",
+      "runtime": "mlx_audio",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "compat_shim_verified",
+      "local_path": "models/qwen3-asr-1.7b-mlx-4bit-compat"
+    },
+    "vibevoice_asr_4bit": {
+      "name": "VibeVoice ASR 7B 4-bit (base, non-streaming)",
+      "repo_id": "mlx-community/VibeVoice-ASR-4bit",
+      "revision": "a1a15cb6c7b70f76b588af7e12f6fab34d5ab654",
+      "precision": "4-bit",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "vibevoice",
+      "status": "BLOCKED_DEGENERATE_OUTPUT",
+      "local_path": "models/vibevoice-asr-4bit-compat"
+    },
+    "vibevoice_streaming_7b_4bit": {
+      "name": "VibeVoice ASR Streaming 7B 4-bit",
+      "repo_id": "mlx-community/VibeVoice-ASR-Streaming-7B-4bit",
+      "revision": "a12d34cbe9dd1458153041d35897332341d18b1b",
+      "precision": "4-bit",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "vibevoice",
+      "status": "downloaded",
+      "local_path": "models/vibevoice-asr-streaming-7b-4bit"
+    },
+    "vibevoice_streaming_7b_bf16": {
+      "name": "VibeVoice ASR Streaming 7B BF16",
+      "repo_id": "mlx-community/VibeVoice-ASR-Streaming-7B-bf16",
+      "revision": "16a47a7aa95869b6c46e45a4a1f1ce114ac58d5f",
+      "precision": "bfloat16",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "vibevoice",
+      "status": "downloaded",
+      "local_path": "models/vibevoice-asr-streaming-7b-bf16"
+    },
+    "mimo_v2_5_asr_8bit": {
+      "name": "MiMo V2.5 ASR 8-bit",
+      "repo_id": "mlx-community/MiMo-V2.5-ASR-MLX-8bit",
+      "revision": "11d0973e989d1a1965dccef2823bed31a34492d3",
+      "precision": "8-bit",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "mimo",
+      "status": "downloaded",
+      "local_path": "models/mimo-v2.5-asr-8bit"
+    },
+    "mimo_audio_tokenizer": {
+      "name": "MiMo Audio Tokenizer",
+      "repo_id": "mlx-community/MiMo-Audio-Tokenizer",
+      "revision": "6d451ed9a73024b4d33b87afa69e0dfd40d8f306",
+      "precision": "float32",
+      "runtime": null,
+      "model_type": null,
+      "adapter": null,
+      "status": null,
+      "local_path": "models/MiMo-Audio-Tokenizer"
+    },
+    "qwen3_asr_1_7b_mc_4bit": {
+      "name": "Qwen3-ASR-1.7B MLX 4-bit (mlx-community)",
+      "repo_id": "mlx-community/Qwen3-ASR-1.7B-4bit",
+      "revision": "78a389c776a5483b2d0d4ea5494e11012e0d6159",
+      "precision": "4-bit",
+      "runtime": "mlx_audio",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "downloaded",
+      "local_path": "models/qwen3-asr-1.7b-mc-4bit"
+    },
+    "qwen3_asr_1_7b_mc_5bit": {
+      "name": "Qwen3-ASR-1.7B MLX 5-bit (mlx-community)",
+      "repo_id": "mlx-community/Qwen3-ASR-1.7B-5bit",
+      "revision": "af6ce82200cac21fecc1b8f9e4e5184bde2e1fab",
+      "precision": "5-bit",
+      "runtime": "mlx_audio",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "downloaded",
+      "local_path": "models/qwen3-asr-1.7b-mc-5bit"
+    },
+    "qwen3_asr_1_7b_mc_6bit": {
+      "name": "Qwen3-ASR-1.7B MLX 6-bit (mlx-community)",
+      "repo_id": "mlx-community/Qwen3-ASR-1.7B-6bit",
+      "revision": "edd077a475c4da058e25b6e6ec1199115ca1be2b",
+      "precision": "6-bit",
+      "runtime": "mlx_audio",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "downloaded",
+      "local_path": "models/qwen3-asr-1.7b-mc-6bit"
+    },
+    "qwen3_asr_1_7b_mc_8bit": {
+      "name": "Qwen3-ASR-1.7B MLX 8-bit (mlx-community)",
+      "repo_id": "mlx-community/Qwen3-ASR-1.7B-8bit",
+      "revision": "a8379a2e2f9e313c9292cdf1af4055ab56d50d55",
+      "precision": "8-bit",
+      "runtime": "mlx_audio",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "downloaded",
+      "local_path": "models/qwen3-asr-1.7b-mc-8bit"
+    },
+    "qwen3_asr_1_7b_mc_bf16": {
+      "name": "Qwen3-ASR-1.7B MLX BF16 (mlx-community)",
+      "repo_id": "mlx-community/Qwen3-ASR-1.7B-bf16",
+      "revision": "e1f6c266914abc5a46e8756e02580f834a6cf8a7",
+      "precision": "bfloat16",
+      "runtime": "mlx_audio",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "downloaded",
+      "local_path": "models/qwen3-asr-1.7b-mc-bf16"
+    },
+    "qwen3_asr_1_7b_alkd_a8t4": {
+      "name": "Qwen3-ASR-1.7B MLX audio8/text4 mixed (Alkd)",
+      "repo_id": "Alkd/Qwen3-ASR-1.7B-audio8-text4-mlx",
+      "revision": "a37c1820cfe5b9ba28d5537df0bc4acac2fd5ffc",
+      "precision": "mixed (audio 8-bit / text 4-bit)",
+      "runtime": "mlx_audio_perlayer",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "downloaded",
+      "local_path": "models/qwen3-asr-1.7b-alkd-a8t4"
+    },
+    "qwen3_asr_1_7b_appauto_bf16": {
+      "name": "Qwen3-ASR-1.7B MLX BF16 (appautomaton, same pipeline as the INT8 winner)",
+      "repo_id": "appautomaton/qwen3-asr-1.7b-bf16-mlx",
+      "revision": "64073f1f9547e582e9c21bd875e68355ad6480f5",
+      "precision": "bfloat16",
+      "runtime": "mlx_speech",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "downloaded",
+      "local_path": "models/qwen3-asr-1.7b-appauto-bf16"
+    },
+    "parakeet_tdt_0_6b_v3": {
+      "name": "Parakeet TDT 0.6B v3 (NVIDIA, MLX)",
+      "repo_id": "mlx-community/parakeet-tdt-0.6b-v3",
+      "revision": "ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15",
+      "precision": "float32 (native conversion)",
+      "runtime": null,
+      "model_type": "parakeet",
+      "adapter": "native",
+      "status": "pending_download",
+      "local_path": "models/parakeet-tdt-0.6b-v3"
+    },
+    "granite_speech_4_1_2b_nar": {
+      "name": "Granite Speech 4.1 2B NAR (IBM, MLX)",
+      "repo_id": "mlx-community/granite-speech-4.1-2b-nar-mlx",
+      "revision": "6acb7892068dd30227f20aba6eb7c4b0ae5c7e7c",
+      "precision": "bfloat16",
+      "runtime": null,
+      "model_type": "granite_speech_nar",
+      "adapter": "native",
+      "status": "pending_download",
+      "local_path": "models/granite-speech-4.1-2b-nar"
+    },
+    "granite_4_0_1b_speech_int8": {
+      "name": "Granite 4.0 1B Speech INT8 (appautomaton, MLX)",
+      "repo_id": "appautomaton/granite-4.0-1b-speech-int8-mlx",
+      "revision": "f93bec975746f554d8d42c0e2ed9c94bc2f3a7b5",
+      "precision": "int8",
+      "runtime": null,
+      "model_type": "granite_speech",
+      "adapter": "native",
+      "status": "pending_download",
+      "local_path": "models/granite-4.0-1b-speech-int8"
+    }
+  },
+  "conditions": [
+    {
+      "id": "whisper-turbo",
+      "name": "Whisper large-v3-turbo",
+      "precision": "float16",
+      "adapter": "whisper",
+      "longform_policy": "native",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "whisper-large",
+      "name": "Whisper large-v3",
+      "precision": "float16",
+      "adapter": "whisper",
+      "longform_policy": "native",
+      "max_input_sec": null,
+      "shortform_max_input_sec": null
+    },
+    {
+      "id": "whisper-distil",
+      "name": "Distil-Whisper large-v3",
+      "precision": "float16",
+      "adapter": "whisper",
+      "longform_policy": "native",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "mega-asr-bf16",
+      "name": "Mega-ASR-bf16",
+      "precision": "bfloat16",
+      "adapter": "mega",
+      "longform_policy": "unsupported",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "mega-asr-6bit",
+      "name": "Mega-ASR-6bit",
+      "precision": "6-bit",
+      "adapter": "mega",
+      "longform_policy": "unsupported",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "tea-asr-1.1",
+      "name": "TEA-ASR-1.1",
+      "precision": "bfloat16",
+      "adapter": "tea",
+      "longform_policy": "native",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "qwen3-asr-1.7b-int8",
+      "name": "Qwen3-ASR-1.7B INT8",
+      "precision": "int8",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": null
+    },
+    {
+      "id": "qwen3-asr-1.7b-4bit",
+      "name": "Qwen3-ASR-1.7B MLX 4-bit (aufklarer)",
+      "precision": "4-bit",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 60,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "vibevoice-asr-4bit",
+      "name": "VibeVoice ASR 7B 4-bit (base, non-streaming)",
+      "precision": "4-bit",
+      "adapter": "vibevoice",
+      "longform_policy": "unsupported",
+      "max_input_sec": 60,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "vibevoice-streaming-7b-4bit",
+      "name": "VibeVoice ASR Streaming 7B 4-bit",
+      "precision": "4-bit",
+      "adapter": "vibevoice",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 60,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "vibevoice-streaming-7b-bf16",
+      "name": "VibeVoice ASR Streaming 7B BF16",
+      "precision": "bfloat16",
+      "adapter": "vibevoice",
+      "longform_policy": "unsupported",
+      "max_input_sec": null,
+      "shortform_max_input_sec": null
+    },
+    {
+      "id": "qwen3-asr-1.7b-4bit-mc",
+      "name": "Qwen3-ASR-1.7B 4-bit (mlx-community)",
+      "precision": "4-bit",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "qwen3-asr-1.7b-5bit-mc",
+      "name": "Qwen3-ASR-1.7B 5-bit (mlx-community)",
+      "precision": "5-bit",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "qwen3-asr-1.7b-6bit-mc",
+      "name": "Qwen3-ASR-1.7B 6-bit (mlx-community)",
+      "precision": "6-bit",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "qwen3-asr-1.7b-8bit-mc",
+      "name": "Qwen3-ASR-1.7B 8-bit (mlx-community)",
+      "precision": "8-bit",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "qwen3-asr-1.7b-bf16-mc",
+      "name": "Qwen3-ASR-1.7B BF16 (mlx-community)",
+      "precision": "bfloat16",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "qwen3-asr-1.7b-bf16-appauto",
+      "name": "Qwen3-ASR-1.7B BF16 (appautomaton)",
+      "precision": "bfloat16",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "qwen3-asr-1.7b-4bit-alkd-a8t4",
+      "name": "Qwen3-ASR-1.7B audio8/text4 mixed (Alkd)",
+      "precision": "mixed (audio 8-bit / text 4-bit)",
+      "adapter": "qwen3",
+      "longform_policy": "auto_segment",
+      "max_input_sec": 300,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "parakeet-tdt-0.6b-v3",
+      "name": "Parakeet TDT 0.6B v3 (NVIDIA, MLX)",
+      "precision": "float32",
+      "adapter": "native",
+      "longform_policy": "unsupported",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "granite-speech-4.1-2b-nar",
+      "name": "Granite Speech 4.1 2B NAR (IBM, MLX)",
+      "precision": "bfloat16",
+      "adapter": "native",
+      "longform_policy": "unsupported",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    },
+    {
+      "id": "granite-speech-4.0-1b-int8",
+      "name": "Granite 4.0 1B Speech INT8 (appautomaton, MLX)",
+      "precision": "int8",
+      "adapter": "native",
+      "longform_policy": "unsupported",
+      "max_input_sec": null,
+      "shortform_max_input_sec": 60
+    }
+  ],
+  "scope": {
+    "round_2026_09_quantized": {
+      "description": "2026-09 quantized round: only 8-bit/4-bit ASR conditions with short-test evidence. Supersedes the old full-matrix scope. All other registered conditions and history are retained, marked excluded below, files not deleted.",
+      "allowed_condition_ids": [
+        "qwen3-asr-1.7b-int8",
+        "vibevoice-streaming-7b-4bit"
+      ],
+      "excluded": [
+        {
+          "id": "whisper-turbo",
+          "reason": "FP16: historical results retained as native-continuous reference; not rerun in this round"
+        },
+        {
+          "id": "whisper-large",
+          "reason": "FP16: historical results retained as native-continuous reference; not rerun in this round"
+        },
+        {
+          "id": "whisper-distil",
+          "reason": "FP16: historical results retained as native-continuous reference; not rerun in this round"
+        },
+        {
+          "id": "mega-asr-bf16",
+          "reason": "BF16, out of 8/4-bit round scope; native longform BLOCKED (router 1501 vs 850)"
+        },
+        {
+          "id": "mega-asr-6bit",
+          "reason": "6-bit, out of 8/4-bit round scope; full-length run FAILED on hallucination loop despite exit 0"
+        },
+        {
+          "id": "tea-asr-1.1",
+          "reason": "BF16, out of 8/4-bit round scope; historical results retained"
+        },
+        {
+          "id": "vibevoice-streaming-7b-bf16",
+          "reason": "BF16: short test showed severe paging; never load in this round"
+        },
+        {
+          "id": "mimo-v2.5-asr-8bit",
+          "reason": "DEFERRED_UNVERIFIED: blocked on missing mlx_lm runtime dependency, not on weights; files kept"
+        },
+        {
+          "id": "gafiatulin/vibevoice-1.5b-mlx",
+          "reason": "TTS (voice-cloning) model, no audio encoder; not ASR-testable. HF API verified 2026-09-21. Not downloaded."
+        },
+        {
+          "id": "native-hour-input-for-quantized",
+          "reason": "Hour-long native input cancelled for both quantized models: VibeVoice has a 59-min silent trim upstream (mlx_audio vibevoice_asr.py:551); replaced by unified <=60s auto-segmented coverage"
+        }
+      ],
+      "gate_entrypoint": "scripts/segment_gate.py",
+      "default_behavior": "runners default to allowed_condition_ids; anything else requires explicit --allow-out-of-scope"
+    },
+    "round_2026_09_hour": {
+      "description": "Hour-long comparison round: speed + peak memory on the continuous long-form audio benchmark (~62.2 min / 3,731.8s, 16 kHz mono PCM WAV, single speaker), then a quality judgment. Native protocol for models whose longform engine handles the full duration; auto_segmented (shared <=60s manifest) for the rest. Protocols are reported separately and never ranked in one table.",
+      "native_conditions": [
+        "whisper-turbo",
+        "whisper-distil",
+        "whisper-large",
+        "tea-asr-1.1"
+      ],
+      "segmented_conditions": [
+        "qwen3-asr-1.7b-int8",
+        "qwen3-asr-1.7b-4bit",
+        "vibevoice-streaming-7b-4bit"
+      ],
+      "reusable_segmented_run": "segfull-20260921-final",
+      "excluded": [
+        {
+          "id": "mega-asr-6bit",
+          "reason": "hour-level capability FAILED: repetition loop / early truncation despite exit 0"
+        },
+        {
+          "id": "mega-asr-bf16",
+          "reason": "hour-level capability BLOCKED: router 1501 vs 850 fails even at 60s"
+        },
+        {
+          "id": "vibevoice-streaming-7b-bf16",
+          "reason": "BF16 severe paging on 24GB; not loaded"
+        },
+        {
+          "id": "mimo-v2.5-asr-8bit",
+          "reason": "DEFERRED_UNVERIFIED: mlx_lm runtime dependency missing"
+        }
+      ]
+    },
+    "round_2026_09_qwen3_variants": {
+      "description": "Qwen3-ASR-1.7B precision/variant sweep on the same 1000-sample Pipecat list, plus the VAD-60s segmentation control. Prepared and weights verified; runs are queued, not started.",
+      "conditions": [
+        "qwen3-asr-1.7b-4bit-mc",
+        "qwen3-asr-1.7b-5bit-mc",
+        "qwen3-asr-1.7b-6bit-mc",
+        "qwen3-asr-1.7b-8bit-mc",
+        "qwen3-asr-1.7b-bf16-mc",
+        "qwen3-asr-1.7b-bf16-appauto",
+        "qwen3-asr-1.7b-4bit-alkd-a8t4",
+        "parakeet-tdt-0.6b-v3",
+        "granite-speech-4.1-2b-nar",
+        "granite-speech-4.0-1b-int8"
+      ],
+      "reference_conditions": [
+        "qwen3-asr-1.7b-int8"
+      ],
+      "pending_control": {
+        "id": "vad-60s-segmentation",
+        "note": "Qwen3-INT8 hour-long with manifests/segments_longform_vad60s.json vs the RMS-60s baseline (0.0200 full / 0.0163 same-range)."
+      },
+      "excluded": [
+        {
+          "id": "vibevoice-asr-4bit",
+          "reason": "BLOCKED_DEGENERATE_OUTPUT: loads but repeats under the locked mlx-audio non-streaming path"
+        }
+      ],
+      "run_map": {
+        "qwen3-asr-1.7b-int8": "pipecat1000-unified"
+      }
+    }
+  }
+}

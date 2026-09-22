@@ -1,0 +1,16 @@
+# Core MLX Framework for Apple Silicon
+mlx==0.32.2
+mlx-audio==0.5.4
+mlx-whisper==0.4.3
+mlx-speech==0.5.2
+
+# Model hub & utilities
+huggingface-hub==1.32.0
+soundfile>=0.12.1
+numpy>=1.26.0
+
+# Evaluation & Metrics
+jiwer==4.0.0
+
+# Visualization & Charts
+matplotlib>=3.8.0

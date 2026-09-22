@@ -1,0 +1,259 @@
+{
+  "manifest_version": "1.0.0",
+  "verified_date": "2026-09-22",
+  "models": {
+    "whisper_turbo": {
+      "name": "Whisper large-v3-turbo",
+      "repo_id": null,
+      "revision": null,
+      "precision": "float16",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "whisper",
+      "status": null,
+      "local_path": "~/.cache/huggingface/hub/models--mlx-community--whisper-large-v3-turbo/snapshots/a4aaeec0636e6fef84abdcbe3544cb2bf7e9f6fb"
+    },
+    "whisper_large": {
+      "name": "Whisper large-v3",
+      "repo_id": null,
+      "revision": null,
+      "precision": "float16",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "whisper",
+      "status": null,
+      "local_path": "~/.cache/huggingface/hub/models--mlx-community--whisper-large-v3-mlx/snapshots/49e6aa286ad60c14352c404340ded53710378a11"
+    },
+    "whisper_distil": {
+      "name": "Distil-Whisper large-v3",
+      "repo_id": null,
+      "revision": null,
+      "precision": "float16",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "whisper",
+      "status": null,
+      "local_path": "~/.cache/huggingface/hub/models--mlx-community--distil-whisper-large-v3/snapshots/e1c3c155644be59f8b477c0186719442f7e3fbb0"
+    },
+    "mega_asr_bf16": {
+      "name": "Mega-ASR-bf16",
+      "repo_id": "mlx-community/Mega-ASR-bf16",
+      "revision": "58b2aa4ed62343871f6dba78a4f71db015406152",
+      "precision": "bfloat16",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "mega",
+      "status": null,
+      "local_path": "models/mega-asr-bf16"
+    },
+    "mega_asr_6bit": {
+      "name": "Mega-ASR-6bit",
+      "repo_id": "mlx-community/Mega-ASR-6bit",
+      "revision": "7a2f147b312bef1ba0027728714c80c9605f3f04",
+      "precision": "6-bit",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "mega",
+      "status": null,
+      "local_path": "models/mega-asr-6bit"
+    },
+    "tea_asr_1_1": {
+      "name": "TEA-ASR-1.1",
+      "repo_id": "JacobLinCool/TEA-ASR-1.1",
+      "revision": "bda08df76d4fd6b487b4a1dd7f0bddf8541696f8",
+      "precision": "bfloat16",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "tea",
+      "status": null,
+      "local_path": "models/tea-asr-1.1/mlx-bf16"
+    },
+    "qwen3_asr_1_7b_int8": {
+      "name": "Qwen3-ASR-1.7B INT8",
+      "repo_id": "appautomaton/qwen3-asr-1.7b-int8-mlx",
+      "revision": "31a02d835ce3b206e6d1e49bdbf33f16352a3f44",
+      "precision": "int8",
+      "runtime": "mlx_speech",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": null,
+      "local_path": "~/.cache/huggingface/hub/models--appautomaton--qwen3-asr-1.7b-int8-mlx/snapshots/31a02d835ce3b206e6d1e49bdbf33f16352a3f44"
+    },
+    "qwen3_asr_1_7b_mlx_4bit": {
+      "name": "Qwen3-ASR-1.7B MLX 4-bit (aufklarer)",
+      "repo_id": "aufklarer/Qwen3-ASR-1.7B-MLX-4bit",
+      "revision": "d4f9fa3bb45489219f0fcbec671c92d9c1a68fb6",
+      "precision": "4-bit",
+      "runtime": "mlx_audio",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "compat_shim_verified",
+      "local_path": "models/qwen3-asr-1.7b-mlx-4bit-compat"
+    },
+    "vibevoice_asr_4bit": {
+      "name": "VibeVoice ASR 7B 4-bit (base, non-streaming)",
+      "repo_id": "mlx-community/VibeVoice-ASR-4bit",
+      "revision": "a1a15cb6c7b70f76b588af7e12f6fab34d5ab654",
+      "precision": "4-bit",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "vibevoice",
+      "status": "BLOCKED_DEGENERATE_OUTPUT",
+      "local_path": "models/vibevoice-asr-4bit-compat"
+    },
+    "vibevoice_streaming_7b_4bit": {
+      "name": "VibeVoice ASR Streaming 7B 4-bit",
+      "repo_id": "mlx-community/VibeVoice-ASR-Streaming-7B-4bit",
+      "revision": "a12d34cbe9dd1458153041d35897332341d18b1b",
+      "precision": "4-bit",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "vibevoice",
+      "status": "downloaded",
+      "local_path": "models/vibevoice-asr-streaming-7b-4bit"
+    },
+    "vibevoice_streaming_7b_bf16": {
+      "name": "VibeVoice ASR Streaming 7B BF16",
+      "repo_id": "mlx-community/VibeVoice-ASR-Streaming-7B-bf16",
+      "revision": "16a47a7aa95869b6c46e45a4a1f1ce114ac58d5f",
+      "precision": "bfloat16",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "vibevoice",
+      "status": "downloaded",
+      "local_path": "models/vibevoice-asr-streaming-7b-bf16"
+    },
+    "mimo_v2_5_asr_8bit": {
+      "name": "MiMo V2.5 ASR 8-bit",
+      "repo_id": "mlx-community/MiMo-V2.5-ASR-MLX-8bit",
+      "revision": "11d0973e989d1a1965dccef2823bed31a34492d3",
+      "precision": "8-bit",
+      "runtime": null,
+      "model_type": null,
+      "adapter": "mimo",
+      "status": "downloaded",
+      "local_path": "models/mimo-v2.5-asr-8bit"
+    },
+    "mimo_audio_tokenizer": {
+      "name": "MiMo Audio Tokenizer",
+      "repo_id": "mlx-community/MiMo-Audio-Tokenizer",
+      "revision": "6d451ed9a73024b4d33b87afa69e0dfd40d8f306",
+      "precision": "float32",
+      "runtime": null,
+      "model_type": null,
+      "adapter": null,
+      "status": null,
+      "local_path": "models/MiMo-Audio-Tokenizer"
+    },
+    "qwen3_asr_1_7b_mc_4bit": {
+      "name": "Qwen3-ASR-1.7B MLX 4-bit (mlx-community)",
+      "repo_id": "mlx-community/Qwen3-ASR-1.7B-4bit",
+      "revision": "78a389c776a5483b2d0d4ea5494e11012e0d6159",
+      "precision": "4-bit",
+      "runtime": "mlx_audio",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "downloaded",
+      "local_path": "models/qwen3-asr-1.7b-mc-4bit"
+    },
+    "qwen3_asr_1_7b_mc_5bit": {
+      "name": "Qwen3-ASR-1.7B MLX 5-bit (mlx-community)",
+      "repo_id": "mlx-community/Qwen3-ASR-1.7B-5bit",
+      "revision": "af6ce82200cac21fecc1b8f9e4e5184bde2e1fab",
+      "precision": "5-bit",
+      "runtime": "mlx_audio",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "downloaded",
+      "local_path": "models/qwen3-asr-1.7b-mc-5bit"
+    },
+    "qwen3_asr_1_7b_mc_6bit": {
+      "name": "Qwen3-ASR-1.7B MLX 6-bit (mlx-community)",
+      "repo_id": "mlx-community/Qwen3-ASR-1.7B-6bit",
+      "revision": "edd077a475c4da058e25b6e6ec1199115ca1be2b",
+      "precision": "6-bit",
+      "runtime": "mlx_audio",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "downloaded",
+      "local_path": "models/qwen3-asr-1.7b-mc-6bit"
+    },
+    "qwen3_asr_1_7b_mc_8bit": {
+      "name": "Qwen3-ASR-1.7B MLX 8-bit (mlx-community)",
+      "repo_id": "mlx-community/Qwen3-ASR-1.7B-8bit",
+      "revision": "a8379a2e2f9e313c9292cdf1af4055ab56d50d55",
+      "precision": "8-bit",
+      "runtime": "mlx_audio",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "downloaded",
+      "local_path": "models/qwen3-asr-1.7b-mc-8bit"
+    },
+    "qwen3_asr_1_7b_mc_bf16": {
+      "name": "Qwen3-ASR-1.7B MLX BF16 (mlx-community)",
+      "repo_id": "mlx-community/Qwen3-ASR-1.7B-bf16",
+      "revision": "e1f6c266914abc5a46e8756e02580f834a6cf8a7",
+      "precision": "bfloat16",
+      "runtime": "mlx_audio",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "downloaded",
+      "local_path": "models/qwen3-asr-1.7b-mc-bf16"
+    },
+    "qwen3_asr_1_7b_alkd_a8t4": {
+      "name": "Qwen3-ASR-1.7B MLX audio8/text4 mixed (Alkd)",
+      "repo_id": "Alkd/Qwen3-ASR-1.7B-audio8-text4-mlx",
+      "revision": "a37c1820cfe5b9ba28d5537df0bc4acac2fd5ffc",
+      "precision": "mixed (audio 8-bit / text 4-bit)",
+      "runtime": "mlx_audio_perlayer",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "downloaded",
+      "local_path": "models/qwen3-asr-1.7b-alkd-a8t4"
+    },
+    "qwen3_asr_1_7b_appauto_bf16": {
+      "name": "Qwen3-ASR-1.7B MLX BF16 (appautomaton, same pipeline as the INT8 winner)",
+      "repo_id": "appautomaton/qwen3-asr-1.7b-bf16-mlx",
+      "revision": "64073f1f9547e582e9c21bd875e68355ad6480f5",
+      "precision": "bfloat16",
+      "runtime": "mlx_speech",
+      "model_type": null,
+      "adapter": "qwen3",
+      "status": "downloaded",
+      "local_path": "models/qwen3-asr-1.7b-appauto-bf16"
+    },
+    "parakeet_tdt_0_6b_v3": {
+      "name": "Parakeet TDT 0.6B v3 (NVIDIA, MLX)",
+      "repo_id": "mlx-community/parakeet-tdt-0.6b-v3",
+      "revision": "ed2b7e8c15f9aaa0b5772e2efb986255eaef7e15",
+      "precision": "float32 (native conversion)",
+      "runtime": null,
+      "model_type": "parakeet",
+      "adapter": "native",
+      "status": "pending_download",
+      "local_path": "models/parakeet-tdt-0.6b-v3"
+    },
+    "granite_speech_4_1_2b_nar": {
+      "name": "Granite Speech 4.1 2B NAR (IBM, MLX)",
+      "repo_id": "mlx-community/granite-speech-4.1-2b-nar-mlx",
+      "revision": "6acb7892068dd30227f20aba6eb7c4b0ae5c7e7c",
+      "precision": "bfloat16",
+      "runtime": null,
+      "model_type": "granite_speech_nar",
+      "adapter": "native",
+      "status": "pending_download",
+      "local_path": "models/granite-speech-4.1-2b-nar"
+    },
+    "granite_4_0_1b_speech_int8": {
+      "name": "Granite 4.0 1B Speech INT8 (appautomaton, MLX)",
+      "repo_id": "appautomaton/granite-4.0-1b-speech-int8-mlx",
+      "revision": "f93bec975746f554d8d42c0e2ed9c94bc2f3a7b5",
+      "precision": "int8",
+      "runtime": null,
+      "model_type": "granite_speech",
+      "adapter": "native",
+      "status": "pending_download",
+      "local_path": "models/granite-4.0-1b-speech-int8"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Environments
+.env
+.venv
+env/
+venv/
+runtime/venv/
+ENV/
+
+# Large Model Weights and Checkpoints
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+*.gguf
+
+# Audio and Dataset binaries
+data/
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+*.opus
+*.parquet
+*.arrow
+
+# Logs, scratchpads, and execution traces
+*.log
+logs/
+.scratch/
+outputs/runs/
+transcripts/
+
+# OS and IDE files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.idea/
+.vscode/
+*.swp
+*~

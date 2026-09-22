@@ -1,0 +1,45 @@
+{
+  "manifest_version": "1.0.0",
+  "generated_date": "2026-09-22",
+  "audio_datasets": {
+    "longform_continuous_benchmark": {
+      "path": "data/longform/audio_16k.wav",
+      "duration_sec": 3731.818,
+      "sample_rate": 16000,
+      "channels": 1,
+      "format": "WAV (PCM 16-bit)",
+      "total_samples": 59709092,
+      "speaker_count": 1,
+      "description": "Continuous long-form audio benchmark (~62.2 min / 3,731.8s, 16 kHz mono PCM WAV, single speaker)",
+      "anonymized": true
+    },
+    "pipecat_conversational_1000": {
+      "upstream_repo": "pipecat-ai/smart-turn-data-v3.1-train",
+      "split_file": "train-00000-of-00001.parquet",
+      "turn_count": 1000,
+      "sample_rate": 16000,
+      "channels": 1,
+      "duration_range_sec": "1.0 to 15.0",
+      "description": "1,000 real-world conversational turns with human-verified reference transcripts",
+      "normalization": "pipecat-phonetic-rules (lowercase, contractions expanded, punctuation stripped, filler words removed)"
+    },
+    "short_sweep_test_15s": {
+      "duration_sec": 15.04,
+      "sample_rate": 16000,
+      "type": "non_speech_intro_music",
+      "purpose": "Edge case probe: verifies robustness against hallucination loops in non-speech regions"
+    },
+    "short_sweep_test_60s": {
+      "duration_sec": 60.03,
+      "sample_rate": 16000,
+      "type": "clean_speech",
+      "purpose": "Standard viability check clip (60s speech passage)"
+    },
+    "short_sweep_test_300s": {
+      "duration_sec": 299.97,
+      "sample_rate": 16000,
+      "type": "extended_speech",
+      "purpose": "Extended single-shot chunk scaling evaluation"
+    }
+  }
+}
