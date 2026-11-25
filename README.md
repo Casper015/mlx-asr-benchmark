@@ -164,6 +164,20 @@ python -m unittest discover -s tests
 
 ---
 
+## Community Contributor Addendum (Apple M5 Max, `oruk/oruk-fourier-2b` MLX 8-bit)
+
+To keep the primary 19-model Apple M5 (24 GB) table and `outputs/ALL_RESULTS.csv` invariants untouched, contributor evaluations on different Apple Silicon hosts are recorded separately below.
+
+Evaluated on the same 1,000-turn conversational corpus (`pipecat-ai/stt-benchmark-data`, `9,593.3 s` / ~2.66 h audio) using `Qwen3Adapter(model_path="oruk/oruk-fourier-2b", precision="8-bit", runtime="mlx_audio", subfolder="mlx/8bit")` on **Apple M5 Max (128 GB, macOS 26.4.1, MLX 0.32.5, `mlx-audio 0.6.8`)**, greedy decoding:
+
+| Model (Native MLX) | HF Repository | Precision | WER (Norm) | Perfect % | P50 (ms) | P95 (ms) | Speedup | Peak MLX | Peak RSS | Notes |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **Oruk Fourier 2B 8-bit** | [oruk/oruk-fourier-2b](https://huggingface.co/oruk/oruk-fourier-2b) (`mlx/8bit`) | 8-bit | **0.0190** | **73.3%** | 288 | 455 | 33.48x | 3,487 MB | 4,111 MB | English-only, CC BY-NC 4.0, 0/1000 empty; M5 Max host (not cross-host latency comparable to M5 24 GB) |
+
+*Whisper `EnglishTextNormalizer` WER: `0.0190` (`254 S / 108 D / 92 I`, `73.2%` perfect); with filler-word removal: `0.0190` (`254 S / 107 D / 92 I`, `73.3%` perfect). Revision `78609f69`; fetches repository-root `config.json` alongside `mlx/8bit/*`.*
+
+---
+
 ## License & Citation
 
 This project is licensed under the [MIT License](LICENSE).

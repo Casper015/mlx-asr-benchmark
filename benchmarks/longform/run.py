@@ -194,7 +194,8 @@ def run_benchmark(
             adapter = Qwen3Adapter(
                 model_path=model_path,
                 precision=precision,
-                runtime=model_entry.get("runtime", "mlx_speech")
+                runtime=model_entry.get("runtime", "mlx_speech"),
+                subfolder=model_entry.get("subfolder"),
             )
             adapter.load()
         elif adapter_type == "whisper":

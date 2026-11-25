@@ -36,19 +36,38 @@ class Qwen3Adapter:
         self,
         model_path: Optional[str] = None,
         precision: str = "int8",
-        runtime: str = "mlx_speech"
+        runtime: str = "mlx_speech",
+        subfolder: Optional[str] = None,
     ):
         self.model_path = model_path or QWEN3_MODEL_ID
         self.precision = precision
         self.runtime = runtime
+        self.subfolder = subfolder.strip("/") if subfolder else None
         self.model = None
         self._mlx_audio = (runtime == "mlx_audio")
         self._mlx_audio_perlayer = (runtime == "mlx_audio_perlayer")
         self.load_time_sec = 0.0
 
+    def _resolve_model_dir(self) -> str:
+        if not self.subfolder:
+            return self.model_path
+        local = Path(self.model_path).expanduser()
+        if local.exists():
+            sub_dir = local / self.subfolder
+            return str(sub_dir if sub_dir.exists() else local)
+        from huggingface_hub import snapshot_download
+        snap = Path(
+            snapshot_download(
+                self.model_path,
+                allow_patterns=["config.json", f"{self.subfolder}/*"],
+            )
+        )
+        return str(snap / self.subfolder)
+
     def load(self) -> float:
         import mlx.core as mx
         start = time.perf_counter()
+        resolved = self._resolve_model_dir()
         if self._mlx_audio_perlayer:
             # Checkpoints that declare a per-layer quantization spec (e.g. audio
             # 8-bit + text 4-bit). The stock loader vetoes audio_tower before
@@ -56,15 +75,15 @@ class Qwen3Adapter:
             # scripts/loaders/mlx_audio_perlayer.py.
             sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
             from loaders.mlx_audio_perlayer import load_qwen3_asr_per_layer
-            self.model = load_qwen3_asr_per_layer(self.model_path, strict=True)
+            self.model = load_qwen3_asr_per_layer(resolved, strict=True)
             mx.eval(self.model.parameters())
         elif self._mlx_audio:
             from mlx_audio.stt.utils import load_model
-            self.model = load_model(self.model_path, model_type="qwen3_asr", strict=True)
+            self.model = load_model(resolved, model_type="qwen3_asr", strict=True)
             mx.eval(self.model.parameters())
         else:
             import mlx_speech
-            model_id = self.model_path or QWEN3_MODEL_ID
+            model_id = resolved or QWEN3_MODEL_ID
             self.model = mlx_speech.asr.load(model_id, revision=QWEN3_REVISION)
             try:
                 params = self.model._runtime.model.parameters()
