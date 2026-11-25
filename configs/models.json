@@ -276,6 +276,19 @@
       "status": "pending_download",
       "local_path": "models/granite-4.0-1b-speech-int8",
       "hf_url": "https://huggingface.co/appautomaton/granite-4.0-1b-speech-int8-mlx"
+    },
+    "oruk_fourier_2b_mlx_8bit": {
+      "name": "Oruk Fourier 2B MLX 8-bit (English-specialized Qwen3-ASR 1.7B, CC BY-NC 4.0)",
+      "repo_id": "oruk/oruk-fourier-2b",
+      "subfolder": "mlx/8bit",
+      "revision": "78609f6900abefab0864699f9b8324f936ee6fac",
+      "precision": "8-bit",
+      "runtime": "mlx_audio",
+      "model_type": "qwen3_asr",
+      "adapter": "qwen3",
+      "status": "verified",
+      "local_path": "models/oruk-fourier-2b/mlx/8bit",
+      "hf_url": "https://huggingface.co/oruk/oruk-fourier-2b"
     }
   }
 }
